@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+ 
+    <head> 
+      
+	<!-- Meta information --> 
+	<meta charset="utf-8"> 
+	
+	<title>jQuery Message Bar</title> 
+	<meta name="keywords" content="" /> 
+	<meta name="description" content="" /> 
+	<meta name="robots" content="index, follow" /> 
+	  	
+	
+	<!-- main stylesheets --> 
+	
+    <link rel="stylesheet" href="css/reset.css" /> 
+	<link rel="stylesheet" href="css/preview.css" /> 
+	<link rel="stylesheet" href="css/dpMessageBar.css" />
+	
+	<!-- import jQuery --> 
+	<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dpMessageBar.js"></script>
+				
+	<script type="text/javascript"> 
+ 		$(document).ready(function(){
+			$('#dpMessageBar').dpMessageBar({
+				theme: 'green'
+			});
+			
+		});
+	</script> 
+    
+    </head> 
+   
+    <body> 
+    	<ul id="dpMessageBar">
+        	<li>Message using the dpMessageBar</li>
+            <li>Message with some <a href="#">link</a></li>
+            <li>Message Number Three...</li>
+            <li>Message Number Four...</li>
+            <li>Message Number Five...</li>
+        </ul>
+    	<div id="top"></div>
+        <div id="content">
+        	<h1 style="float:left;">jQuery Message Bar</h1>
+			<h2 style="float:right; margin-top:40px; margin-right:20px;">by DPereyra</h2>
+            <div class="clear"></div>
+            <div class="main">
+                
+            	<h2>Introduction</h2>
+                
+                <p>
+                	The jQuery Message Bar is a professional and elegant plugin that adds a message bar to your pages.
+                </p>
+                <br /><br />
+                <h2>Usage</h2>
+                
+                <p>
+                	Simply reference the relevant files at the head of your page like so:<br /><br />
+    <pre>
+    &lt;!-- Styles --&gt;
+    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/dpMessageBar.css&quot; /&gt;
+    
+    &lt;!-- jQuery --&gt;
+    
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.5.2.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- required plugins --&gt;
+    
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.dpMessageBar.js&quot;&gt;&lt;/script&gt;
+    </pre>
+                    
+                    
+                    Initialitation<br /><br />
+    <pre>
+    $(document).ready(function(){
+       $(&quot;#dpMessageBar&quot;).dpMessageBar();
+    });
+    </pre><br />
+                    #dpMessageBar is the ID of the UL HTML Object that will use this plugin.<br /><br />
+    <pre>
+    &lt;ul id=&quot;dpMessageBar&quot;&gt;
+        &lt;li&gt;Message 1...&lt;/li&gt;
+        &lt;li&gt;Message 2...&lt;/li&gt;
+        &lt;li&gt;Message 3...&lt;/li&gt;
+        &lt;li&gt;Message 4...&lt;/li&gt;
+    &lt;/ul&gt;
+    </pre>
+
+                </p>
+                
+                <br /><br />
+                <h2>Options</h2>
+                
+                <p>
+                	<ul>
+                    	<li><h4>loop</h4>
+                        Signature:&nbsp;
+                        $("#dpMessageBar ").dpMessageBar ({loop: true })<br />
+                        Set whether to loop is active.<br />
+                        Default value is true
+                        <hr />
+                        </li>
+                        <li>autoload</li>
+                        Signature:&nbsp;
+                        $("#dpMessageBar ").dpMessageBar ({autoload: true })<br />
+                        Set if showing the message bar when the page loads.<br />
+                        Default value is true
+                        <hr />
+                        <li>speedAnimation</li>
+                        Signature:&nbsp;
+                        $("#dpMessageBar ").dpMessageBar ({speedAnimation: 500 })<br />
+                        Set the speed animation in miliseconds (300, 500, 1000, 2000, etc) or "slow" and "fast".<br />
+                        Default value is "slow"
+                        <hr />
+                        <li>delay</li>
+                        Signature:&nbsp;
+                        $("#dpMessageBar ").dpMessageBar ({delay: 1000 })<br />
+                        Set the delay in miliseconds (300, 500, 1000, 2000, 5000, etc).<br />
+                        Default value is 3000
+                        <hr />
+                        <li>theme</li>
+                        Signature:&nbsp;
+                        $("#dpMessageBar ").dpMessageBar ({theme: "navy" })<br />
+                        Set the color theme. Possible values are: Cream, Navy, Green, Red, Chocolate<br />
+                        Default value is "cream"
+                        <hr />
+                        <li>showArrows</li>
+                        Signature:&nbsp;
+                        $("#dpMessageBar ").dpMessageBar ({showArrows: false })<br />
+                        Set if showing the arrows or not.<br />
+                        Default value is "true"
+                        <hr />
+                        <li>position</li>
+                        Signature:&nbsp;
+                        $("#dpMessageBar ").dpMessageBar ({position: "top" })<br />
+                        Set the position of the bar. Possible values are: top, fixed<br />
+                        Default value is "fixed"
+                        <hr />
+                    </ul>
+                </p>
+                <div class="clear"></div>
+                <br /><br />
+                <h2>Using Links</h2>
+                
+                <p>
+                	You can use links on the messages normally:<br /><br />
+    <pre>
+    &lt;ul id=&quot;dpMessageBar&quot;&gt;
+        &lt;li&gt;Message 1... click &lt;a href="#"&gt;here&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;Message 2... click &lt;a href="#"&gt;here&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;Message 3... click &lt;a href="#"&gt;here&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;Message 4... click &lt;a href="#"&gt;here&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    </pre>
+                </p>
+                
+    </pre>
+                </p>
+                
+                <br /><br />
+                <h2>Color Variations</h2>
+                
+                <p>
+                	<ul>
+                    	<li><a href="index.html">Cream</a></li>
+                        <li><a href="navy.html">Navy</a></li>
+                        <li><a href="green.html">Green</a></li>
+                        <li><a href="red.html">Red</a></li>
+                        <li><a href="chocolate.html">Chocolate</a></li>
+                    </ul>
+                </p>
+                <div class="clear"></div>
+
+			</div>
+        </div>
+        
+    </body> 
+	
+</html> 

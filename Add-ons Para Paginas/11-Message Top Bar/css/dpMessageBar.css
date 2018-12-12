@@ -1,0 +1,113 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:700italic);
+
+.dpMessageBar {
+	position:fixed;
+	z-index:999;
+	top:0;
+	left:0;
+	margin:0;
+	padding:0;
+	width:100%;
+	height:72px;
+	background:url(dpMessageBar/cream/bg.png) transparent repeat-x 0 0;	
+}
+
+.dpMessageBar a.arrow_left {
+	position:absolute;
+	top:15px;
+	right:100px;
+	width:40px;
+	height:42px;
+	display:block;
+	background:url(dpMessageBar/cream/arrows.png) no-repeat transparent 0 0;
+}
+
+.dpMessageBar a.arrow_left:hover {
+	background-position: -42px 0;
+}
+
+#dpMessageBar_show {
+	position:fixed;
+	top:0;
+	right:60px;
+	width:69px;
+	height:50px;
+	display:block;
+	background:url(dpMessageBar/cream/show.png) no-repeat transparent 0 0;
+}
+
+#dpMessageBar_show:hover {
+	background-position: -69px 0;
+}
+
+#dpMessageBar_hide {
+	position:fixed;
+	top:72px;
+	right:60px;
+	width:69px;
+	height:50px;
+	display:block;
+	background:url(dpMessageBar/cream/show.png) no-repeat transparent -138px 0;
+}
+
+#dpMessageBar_hide:hover {
+	background-position: -207px 0;
+}
+
+.dpMessageBar a.arrow_right {
+	position:absolute;
+	top:15px;
+	right:50px;
+	width:40px;
+	height:42px;
+	display:block;
+	background:url(dpMessageBar/cream/arrows.png) no-repeat transparent 0 -42px;
+}
+
+.dpMessageBar a.arrow_right:hover {
+	background-position: -42px -42px;
+}
+
+.dpMessageBar ul.dpMessageBar_list {
+	position:relative;
+	margin:0 auto;
+	padding:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+.dpMessageBar ul.dpMessageBar_list li {
+	position:absolute;
+	top:15px;
+	width:100%;
+	height:72px;
+	text-align: center;
+	font-family: 'Lobster Two', cursive;
+	font-weight: 700; 
+	font-style:italic;
+	font-size:35px;
+	color:#d9d9d9;
+	text-shadow: 1px 1px 3px #888;
+}
+
+.dpMessageBar ul.dpMessageBar_list li a {
+	color: #C1C1C1;
+	text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+	.dpMessageBar ul.dpMessageBar_list li {
+		font-size:20px;
+		top:25px;
+	}
+	.dpMessageBar a.arrow_right {
+		right:10px;
+	}
+	.dpMessageBar a.arrow_left {
+		right:60px;
+	}
+	#dpMessageBar_hide, #dpMessageBar_show {
+		right: 10px;	
+	}
+}
